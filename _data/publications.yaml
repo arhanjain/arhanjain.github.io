@@ -14,6 +14,14 @@ papers:
     website: "https://droid-dataset.github.io/"
     selected: y
 
+  - title: "Open X-Embodiment: Robotic Learning Datasets and RT-X Models"
+    image: "https://robotics-transformer-x.github.io/img/overview.png"
+    authors: "Abby O'Neill, Abdul Rehman, Abhinav Gupta, Abhiram Maddukuri, Abhishek Gupta, Abhishek Padalkar, Abraham Lee, Acorn Pooley, Agrim Gupta, Ajay Mandlekar, Ajinkya Jain, Albert Tung, Alex Bewley, Alex Herzog, Alex Irpan, Alexander Khazatsky, Anant Rai, Anchit Gupta, Andrew Wang, Andrey Kolobov, Anikait Singh, Animesh Garg, Aniruddha Kembhavi, Annie Xie, Anthony Brohan, Antonin Raffin, Archit Sharma, Arefeh Yavary, <b>Arhan Jain</b>, and 262 other authors"
+    venue: "ICRA 2024"
+    paper_pdf: "https://arxiv.org/pdf/2310.08864"
+    website: "https://robotics-transformer-x.github.io/"
+    selected: y
+
   - title: "PBSCSR: The Piano Bootleg Score Composer Style Recognition Dataset"
     image: "/assets/publications/PBSCR/cover.png"
     authors: "<b>Arhan Jain</b>, Alec Bunn, Austin Pham, TJ Tsai"
