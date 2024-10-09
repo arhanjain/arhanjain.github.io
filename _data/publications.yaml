@@ -2,7 +2,7 @@ papers:
   - title: "Scaling Robot-Learning by Crowdsourcing Simulation Environments"
     image: "/assets/publications/SCAR/cover.png"
     authors: "Marcel Torne Villasevil, <b>Arhan Jain</b>, Vidyaaranya Macha, Jiayi Yuan, Lars Lien Ankile, Anthony Simeonov, Pulkit Agrawal, Abhishek Gupta"
-    venue: "CoRL 2024"
+    venue: "ICRA 2025"
       #    paper_pdf: "https://arxiv.org/pdf/2305.14336.pdf"
     selected: y
 
