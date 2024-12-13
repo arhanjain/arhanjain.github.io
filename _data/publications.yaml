@@ -1,6 +1,7 @@
 papers:
   - title: "DRAWER: Digital Reconstruction and Articulation With Environment Realism"
     authors: "Hongchi Xia, Entong Su, Marius Memmel, <b>Arhan Jain</b>, Raymond Yu, Numfor Mbiziwo-Tiapo, Ali Farhadi, Abhishek Gupta, Shenlong Wang, Wei-Chiu Ma"
+    venue: "TBA"
     selected: y
   - title: "Scaling Robot-Learning by Crowdsourcing Simulation Environments"
     image: "/assets/publications/SCAR/cover.png"
