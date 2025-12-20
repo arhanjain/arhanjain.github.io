@@ -10,6 +10,103 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Publications Side Panel -->
+  <div class="pubs-panel" id="pubsPanel">
+    <button class="pubs-tab" onclick="document.getElementById('pubsPanel').classList.toggle('open')">
+      <span>Publications</span>
+    </button>
+    <div class="pubs-content">
+      <div class="pub">
+        <div class="pub-figure">
+          <img src="assets/publications/polaris-teaser.png" alt="PolaRiS">
+        </div>
+        <p class="pub-title">
+          <a href="https://arxiv.org/abs/2512.16881">PolaRiS: Scalable Real-to-Sim Evaluations for Generalist Robot Policies</a>
+        </p>
+        <p class="pub-meta">
+          <span class="pub-authors"><strong>A. Jain</strong>*, M. Zhang*, K. Arora, W. Chen, M. Torne, M. Z. Irshad, S. Zakharov, Y. Wang, S. Levine, C. Finn, W.-C. Ma, D. Shah, A. Gupta, K. Pertsch</span>
+          <span class="pub-venue">Under Review</span>
+        </p>
+      </div>
+
+      <div class="pub">
+        <div class="pub-figure">
+          <img src="assets/publications/roboarena-teaser.jpeg" alt="RoboArena">
+        </div>
+        <p class="pub-title">
+          <a href="https://arxiv.org/abs/2506.18123">RoboArena: Distributed Real-World Evaluation of Generalist Robot Policies</a>
+        </p>
+        <p class="pub-meta">
+          <span class="pub-authors">P. Atreya*, K. Pertsch*, T. Lee*, M. J. Kim, <strong>A. Jain</strong>, A. Kuramshin, C. Eppner, C. Neary, E. Hu, F. Ramos, J. Tremblay, K. Arora, K. Ellis, L. Macesanu, M. T. Villasevil, M. Leonard, M. Cho, O. Aslan, S. Dass, J. Wang, W. Reger, X. Yuan, X. Yang, A. Gupta, D. Jayaraman, G. Berseth, K. Daniilidis, R. Martin-Martin, Y. Lee, P. Liang, C. Finn, S. Levine</span>
+          <span class="pub-venue">arXiv 2025</span>
+        </p>
+      </div>
+
+      <div class="pub">
+        <div class="pub-figure">
+          <img src="assets/publications/DRAWER/cover.png" alt="DRAWER">
+        </div>
+        <p class="pub-title">
+          <a href="#">Drawer: Digital Reconstruction and Articulation with Environment Realism</a>
+        </p>
+        <p class="pub-meta">
+          <span class="pub-authors">H. Xia, E. Su, M. Memmel, <strong>A. Jain</strong>, R. Yu, N. Mbiziwo-Tiapo, A. Farhadi, A. Gupta, S. Wang, W.-C. Ma</span>
+          <span class="pub-venue">CVPR 2025</span>
+        </p>
+      </div>
+
+      <div class="pub">
+        <div class="pub-figure">
+          <img src="assets/publications/SCAR/cover.png" alt="SCAR">
+        </div>
+        <p class="pub-title">
+          <a href="https://arxiv.org/abs/2412.01770">Robot Learning with Super-Linear Scaling</a>
+        </p>
+        <p class="pub-meta">
+          <span class="pub-authors">M. Torne*, <strong>A. Jain</strong>*, J. Yuan*, V. Macha*, L. Ankile, A. Simeonov, P. Agrawal, A. Gupta</span>
+          <span class="pub-venue">RSS 2025</span>
+        </p>
+      </div>
+      <div class="pub">
+        <div class="pub-figure">
+          <img src="assets/publications/DROID/cover.png" alt="DROID">
+        </div>
+        <p class="pub-title">
+          <a href="https://droid-dataset.github.io/">DROID: A Large-Scale In-The-Wild Robot Manipulation Dataset</a>
+        </p>
+        <p class="pub-meta">
+          <span class="pub-authors">A. Khazatsky*, K. Pertsch*, S. Nair, A. Balakrishna, S. Dasari, S. Karamcheti, S. Nasiriany, M. Kumar Srirama, L. Y. Chen, K. Ellis, P. D. Fagan, J. Hejna, M. Itkina, M. Lepert, Y. J. Ma, P. T. Miller, J. Wu, S. Belkhale, S. Dass, H. Ha, <strong>A. Jain</strong>, A. Lee, Y. Lee, M. Memmel, S. Park, I. Radosavovic, K. Wang, A. Zhan, K. Black, C. Chi, K. B. Hatch, S. Lin, J. Lu, J. Mercat, A. Rehman, P. R. Sanketi, A. Sharma, C. Simpson, Q. Vuong, H. R. Walke, B. Wulfe, T. Xiao, J. H. Yang, A. Yavary, T. Z. Zhao, C. Agia, R. Baijal, M. G. Castro, D. Chen, Q. Chen, T. Chung, J. Drake, E. P. Foster, J. Gao, V. Guizilini, D. A. Herrera, M. Heo, K. Hsu, J. Hu, M. Z. Irshad, D. Jackson, C. Le, Y. Li, K. Lin, R. Lin, Z. Ma, A. Maddukuri, S. Mirchandani, D. Morton, T. Nguyen, A. O'Neill, R. Scalise, D. Seale, V. Son, S. Tian, E. Tran, A. E. Wang, Y. Wu, A. Xie, J. Y. Yang, P. Yin, Y. Zhang, O. Bastani, G. Berseth, J. Bohg, K. Goldberg, A. Gupta, A. Gupta, D. Jayaraman, J. J. Lim, J. Malik, R. M. Martín-Martín, S. Ramamoorthy, D. Sadigh, S. Song, J. Wu, M. C. Yip, Y. Zhu, T. Kollar, S. Levine, C. Finn</span>
+          <span class="pub-venue">RSS 2024</span>
+        </p>
+      </div>
+      <div class="pub">
+        <div class="pub-figure">
+          <img src="assets/publications/OpenX-Teaser.png" alt="Open X-Embodiment">
+        </div>
+        <p class="pub-title">
+          <a href="https://robotics-transformer-x.github.io">Open X-Embodiment: Robotic Learning Datasets and RT-X Models</a>
+        </p>
+        <p class="pub-meta">
+          <span class="pub-authors">Open X-Embodiment Collaboration</span>
+          <span class="pub-venue">ICRA 2024</span>
+          <span class="award">Best Paper</span>
+        </p>
+      </div>
+      <div class="pub">
+        <div class="pub-figure">
+          <img src="assets/publications/PBSCR/cover.png" alt="PBSCR">
+        </div>
+        <p class="pub-title">
+          <a href="https://arxiv.org/abs/2401.16803">PBSCR: The Piano Bootleg Score Composer Recognition Dataset</a>
+        </p>
+        <p class="pub-meta">
+          <span class="pub-authors"><strong>A. Jain</strong>*, A. Bunn*, A. Pham*, T.J. Tsai</span>
+          <span class="pub-venue">TISMR 2024</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
   <main>
     <header>
       <div>
@@ -40,38 +137,6 @@
       </p>
     </div>
 
-    <h2>Research</h2>
-
-    <div class="pub">
-      <div class="pub-figure">
-        <img src="assets/publications/DROID/cover.png" alt="DROID">
-      </div>
-      <div class="pub-content">
-        <p class="pub-title">
-          <a href="https://droid-dataset.github.io/">DROID: A Large-Scale In-The-Wild Robot Manipulation Dataset</a>
-        </p>
-        <p class="pub-meta">
-          Buncha ppl <strong>A. Jain</strong>, et al.<br>
-          <span class="pub-venue">RSS 2024</span>
-        </p>
-      </div>
-    </div>
-
-    <div class="pub">
-      <div class="pub-figure">
-        <img src="assets/publications/OpenX-Teaser.png" alt="Open X-Embodiment">
-      </div>
-      <div class="pub-content">
-        <p class="pub-title">
-          <a href="https://robotics-transformer-x.github.io">Open X-Embodiment: Robotic Learning Datasets and RT-X Models</a>
-        </p>
-        <p class="pub-meta">
-          Buncha ppl <strong>A. Jain</strong>, et al.<br>
-          <span class="pub-venue">ICRA 2024</span>
-          <span class="award">ICRA Best Paper</span>
-        </p>
-      </div>
-    </div>
 
     <div class="experience">
       <div class="experience-list">
@@ -120,11 +185,12 @@
 
     <h2>Personal</h2>
     <p class="personal-text">
-      When I'm not in the lab—hiking, traveling, hanging with my dog. 
+      When I'm not in the lab, I'm hiking, traveling, or hanging with my dog. 
       (As of late, I've mostly been in the lab 😉)
     </p>
     <div class="gallery">
-      <div class="gallery-item">
+      more to come :)
+      <!-- <div class="gallery-item">
         <img src="https://placekitten.com/300/300" alt="">
       </div>
       <div class="gallery-item">
@@ -132,7 +198,7 @@
       </div>
       <div class="gallery-item">
         <img src="https://placekitten.com/302/302" alt="">
-      </div>
+      </div> -->
     </div>
 
     <footer>
@@ -141,5 +207,67 @@
     </footer>
   </main>
 
+  <script>
+    document.querySelectorAll('.pubs-content .pub-authors').forEach(container => {
+      const inner = document.createElement('span');
+      inner.className = 'pub-authors-inner';
+      inner.innerHTML = container.innerHTML;
+      container.innerHTML = '';
+      container.appendChild(inner);
+    });
+
+    document.querySelectorAll('.pubs-content .pub').forEach(pub => {
+      const container = pub.querySelector('.pub-authors');
+      const inner = pub.querySelector('.pub-authors-inner');
+      if (!container || !inner) return;
+
+      let animationId = null;
+      let pos = 0;
+      let startTime = null;
+      const speed = 30; // pixels per second
+
+      function animate(timestamp) {
+        if (!startTime) startTime = timestamp;
+
+        const overflow = inner.offsetWidth - container.offsetWidth;
+        if (overflow <= 0) return;
+
+        const elapsed = timestamp - startTime;
+        const pauseDuration = 800;
+        const duration = (overflow / speed) * 1000;
+
+        if (elapsed < pauseDuration) {
+          pos = 0;
+        } else {
+          pos = Math.min(((elapsed - pauseDuration) / duration) * overflow, overflow);
+        }
+
+        inner.style.transform = `translateX(${-pos}px)`;
+
+        if (pos < overflow) {
+          animationId = requestAnimationFrame(animate);
+        }
+      }
+
+      pub.addEventListener('mouseenter', () => {
+        const overflow = inner.offsetWidth - container.offsetWidth;
+        if (overflow > 0) {
+          startTime = null;
+          pos = 0;
+          inner.style.transform = 'translateX(0)';
+          animationId = requestAnimationFrame(animate);
+        }
+      });
+
+      pub.addEventListener('mouseleave', () => {
+        if (animationId) {
+          cancelAnimationFrame(animationId);
+          animationId = null;
+        }
+        startTime = null;
+        inner.style.transform = 'translateX(0)';
+      });
+    });
+  </script>
 </body>
 </html>
