@@ -422,6 +422,16 @@ footer a {
   will-change: transform;
 }
 
+/* Mobile publications button - hidden on desktop */
+.pubs-mobile-btn {
+  display: none;
+}
+
+/* Close button - hidden on desktop */
+.pubs-close {
+  display: none;
+}
+
 @media (max-width: 540px) {
   header {
     grid-template-columns: 1fr;
@@ -446,7 +456,63 @@ footer a {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .pubs-panel {
+  /* Mobile publications button */
+  .pubs-mobile-btn {
+    display: block;
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    background: #1a5f7a;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 50px;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    cursor: pointer;
+    z-index: 99;
+  }
+
+  /* Hide desktop tab on mobile */
+  .pubs-tab {
     display: none;
+  }
+
+  /* Mobile publications overlay */
+  .pubs-panel {
+    transform: translateY(100%);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .pubs-panel.open {
+    transform: translateY(0);
+  }
+
+  /* Close button for mobile overlay */
+  .pubs-close {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    color: #666;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 102;
+  }
+
+  .pubs-content {
+    width: 100%;
+    border-left: none;
+    padding-top: 3.5rem;
   }
 }

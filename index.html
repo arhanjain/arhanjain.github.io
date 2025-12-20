@@ -10,11 +10,17 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Mobile Publications Button -->
+  <button class="pubs-mobile-btn" onclick="document.getElementById('pubsPanel').classList.add('open')">
+    Publications
+  </button>
+
   <!-- Publications Side Panel -->
   <div class="pubs-panel" id="pubsPanel">
     <button class="pubs-tab" onclick="document.getElementById('pubsPanel').classList.toggle('open')">
       <span>Publications</span>
     </button>
+    <button class="pubs-close" onclick="document.getElementById('pubsPanel').classList.remove('open')">✕</button>
     <div class="pubs-content">
       <div class="pub">
         <div class="pub-figure">
