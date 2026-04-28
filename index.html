@@ -135,7 +135,8 @@
         I'm a PhD student at the <a href="https://weirdlab.cs.washington.edu/">WEIRD Lab</a>
         at UW, where I work on getting robots to learn tasks with high reliability and 
         autonomous improvement. Happily advised by 
-        <a href="https://homes.cs.washington.edu/~abhgupta/">Abhishek Gupta</a>.
+        <a href="https://homes.cs.washington.edu/~abhgupta/">Abhishek Gupta</a>. 
+        I am supported by the <a href="https://www.nsf.gov/funding/opportunities/grfp-nsf-graduate-research-fellowship-program">NSF Graduate Research Fellowship</a>
       </p>
       <p>
         Lately I've been thinking about simulation evaluation, policy improvement,
@@ -192,19 +193,16 @@
     <h2>Personal</h2>
     <p class="personal-text">
       When I'm not in the lab, I'm hiking, traveling, or hanging with my dog. 
-      (As of late, I've mostly been in the lab 😉)
     </p>
     <div class="gallery">
-      more to come :)
-      <!-- <div class="gallery-item">
-        <img src="https://placekitten.com/300/300" alt="">
+      <div class="gallery-item">
+        <img src="assets/personal/IMG_2544.jpg" alt="Arhan with dog">
+        <span class="gallery-caption">pillu, my pup</span>
       </div>
       <div class="gallery-item">
-        <img src="https://placekitten.com/301/301" alt="">
+        <img src="assets/personal/IMG_2785.jpg" alt="Arhan in Taipei">
+        <span class="gallery-caption">xiangshan, taipei</span>
       </div>
-      <div class="gallery-item">
-        <img src="https://placekitten.com/302/302" alt="">
-      </div> -->
     </div>
 
     <footer>
@@ -214,6 +212,24 @@
   </main>
 
   <script>
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      const image = item.querySelector('img');
+      if (!image) return;
+
+      const setAspectRatio = () => {
+        if (!image.naturalWidth || !image.naturalHeight) return;
+        const ratio = image.naturalWidth / image.naturalHeight;
+        const clampedRatio = Math.max(0.65, Math.min(2.4, ratio));
+        item.style.setProperty('--ar', clampedRatio.toString());
+      };
+
+      if (image.complete) {
+        setAspectRatio();
+      } else {
+        image.addEventListener('load', setAspectRatio, { once: true });
+      }
+    });
+
     document.querySelectorAll('.pubs-content .pub-authors').forEach(container => {
       const inner = document.createElement('span');
       inner.className = 'pub-authors-inner';
