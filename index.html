@@ -195,20 +195,37 @@
       When I'm not in the lab, I'm hiking, traveling, or hanging with my dog. 
     </p>
     <div class="gallery">
+      <div class="gallery-item">
+        <img src="assets/personal/seattle-summer-boat.webp" alt="Seattle boat" loading="lazy" decoding="async">
+        <span class="gallery-caption">seattle, wa</span>
+        <span class="gallery-date">jun 2026</span>
+      </div>
+      <div class="gallery-item gallery-item--group">
+        <div class="gallery-group-images">
+          <img src="assets/personal/japan-hayakawa.webp" alt="Hayakawa, Japan" loading="lazy" decoding="async">
+          <img src="assets/personal/japan-osaka.webp" alt="Osaka, Japan" loading="lazy" decoding="async">
+          <img src="assets/personal/japan-fujinomiya.webp" alt="Fujinomiya, Japan" loading="lazy" decoding="async">
+        </div>
+        <span class="gallery-caption">(hayakawa, osaka, fujinomiya), japan</span>
+        <span class="gallery-date">may 2026</span>
+      </div>
       <div class="gallery-item gallery-item--group">
         <div class="gallery-group-images">
           <img src="assets/personal/martin-garrix-gorge-1.webp" alt="Martin Garrix at The Gorge" loading="lazy" decoding="async">
           <img src="assets/personal/martin-garrix-gorge-2.webp" alt="Martin Garrix at The Gorge" loading="lazy" decoding="async">
         </div>
-        <span class="gallery-caption">Martin Garrix, The Gorge 2026</span>
+        <span class="gallery-caption">martin garrix, the gorge</span>
+        <span class="gallery-date">may 2026</span>
       </div>
       <div class="gallery-item">
         <img src="assets/personal/IMG_2544.jpg" alt="Arhan with dog" loading="lazy" decoding="async">
         <span class="gallery-caption">pillu, my pup</span>
+        <span class="gallery-date">april 2026</span>
       </div>
       <div class="gallery-item">
         <img src="assets/personal/IMG_2785.jpg" alt="Arhan in Taipei" loading="lazy" decoding="async">
-        <span class="gallery-caption">xiangshan, taipei 2026</span>
+        <span class="gallery-caption">xiangshan, taipei</span>
+        <span class="gallery-date">april 2026</span>
       </div>
     </div>
 
@@ -232,8 +249,7 @@
             (sum, img) => sum + img.naturalWidth / img.naturalHeight,
             0
           );
-          const clampedRatio = Math.max(0.65, Math.min(2.4, combinedRatio));
-          item.style.setProperty('--ar', clampedRatio.toString());
+          item.style.setProperty('--ar', combinedRatio.toString());
           images.forEach(img => {
             img.style.setProperty('--img-ar', (img.naturalWidth / img.naturalHeight).toString());
           });
