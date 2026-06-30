@@ -317,6 +317,25 @@ p {
   transform: scale(1.02);
 }
 
+.gallery-item--group {
+  flex: 1 1 100%;
+}
+
+.gallery-item--group .gallery-group-images {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap: 0.25rem;
+}
+
+.gallery-item--group .gallery-group-images img {
+  flex: calc(var(--img-ar, 1) * 100) 1 0;
+  min-width: 0;
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+}
+
 .gallery-caption {
   position: absolute;
   left: 0.5rem;

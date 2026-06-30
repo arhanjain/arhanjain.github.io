@@ -117,7 +117,7 @@
     <header>
       <div>
         <h1>Arhan Jain</h1>
-        <p class="tagline">robots, research, sometimes other things</p>
+        <!--<p class="tagline">robots, research, and travels</p>-->
         <p class="email"><a href="mailto:arhanj@cs.washington.edu">arhanj@cs.washington.edu</a></p>
         <div class="social-links">
           <a href="https://github.com/arhanjain">github</a>
@@ -195,13 +195,20 @@
       When I'm not in the lab, I'm hiking, traveling, or hanging with my dog. 
     </p>
     <div class="gallery">
+      <div class="gallery-item gallery-item--group">
+        <div class="gallery-group-images">
+          <img src="assets/personal/martin-garrix-gorge-1.webp" alt="Martin Garrix at The Gorge" loading="lazy" decoding="async">
+          <img src="assets/personal/martin-garrix-gorge-2.webp" alt="Martin Garrix at The Gorge" loading="lazy" decoding="async">
+        </div>
+        <span class="gallery-caption">Martin Garrix, The Gorge 2026</span>
+      </div>
       <div class="gallery-item">
-        <img src="assets/personal/IMG_2544.jpg" alt="Arhan with dog">
+        <img src="assets/personal/IMG_2544.jpg" alt="Arhan with dog" loading="lazy" decoding="async">
         <span class="gallery-caption">pillu, my pup</span>
       </div>
       <div class="gallery-item">
-        <img src="assets/personal/IMG_2785.jpg" alt="Arhan in Taipei">
-        <span class="gallery-caption">xiangshan, taipei</span>
+        <img src="assets/personal/IMG_2785.jpg" alt="Arhan in Taipei" loading="lazy" decoding="async">
+        <span class="gallery-caption">xiangshan, taipei 2026</span>
       </div>
     </div>
 
@@ -213,21 +220,38 @@
 
   <script>
     document.querySelectorAll('.gallery-item').forEach(item => {
-      const image = item.querySelector('img');
-      if (!image) return;
+      const images = item.querySelectorAll('img');
+      if (!images.length) return;
 
       const setAspectRatio = () => {
-        if (!image.naturalWidth || !image.naturalHeight) return;
-        const ratio = image.naturalWidth / image.naturalHeight;
+        const loaded = [...images].every(img => img.naturalWidth && img.naturalHeight);
+        if (!loaded) return;
+
+        if (item.classList.contains('gallery-item--group')) {
+          const combinedRatio = [...images].reduce(
+            (sum, img) => sum + img.naturalWidth / img.naturalHeight,
+            0
+          );
+          const clampedRatio = Math.max(0.65, Math.min(2.4, combinedRatio));
+          item.style.setProperty('--ar', clampedRatio.toString());
+          images.forEach(img => {
+            img.style.setProperty('--img-ar', (img.naturalWidth / img.naturalHeight).toString());
+          });
+          return;
+        }
+
+        const ratio = images[0].naturalWidth / images[0].naturalHeight;
         const clampedRatio = Math.max(0.65, Math.min(2.4, ratio));
         item.style.setProperty('--ar', clampedRatio.toString());
       };
 
-      if (image.complete) {
-        setAspectRatio();
-      } else {
-        image.addEventListener('load', setAspectRatio, { once: true });
-      }
+      images.forEach(image => {
+        if (image.complete) {
+          setAspectRatio();
+        } else {
+          image.addEventListener('load', setAspectRatio, { once: true });
+        }
+      });
     });
 
     document.querySelectorAll('.pubs-content .pub-authors').forEach(container => {
